@@ -79,7 +79,6 @@ def playerStandings():
     cursor.execute(my_query)
     results = cursor.fetchall()
     db.close()
-    #for sub in results:  print(sub);
     return results
 
 
@@ -137,11 +136,8 @@ def swissPairings():
     """
     pairings = []
     standings = playerStandings()
-    #[ ( pid SERIAL primary key, name TEXT, wins SMALLINT, matches SMALLINT ) ]
-    #for itr in standings:        print ( itr );
     while len(standings) > 0:
         player1 = standings.pop(0)
         player2 = standings.pop(0)
         pairings[ len(pairings):] = [ (player1[0], player1[1], player2[0], player2[1]) ]
-    #for itr in pairings:        print ( itr );
     return pairings
