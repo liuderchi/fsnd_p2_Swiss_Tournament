@@ -10,9 +10,6 @@
   - VirtualBox v 4.3.0. recommend.
   - Vagrant 1.7.4 or higher.
 
-## Directory Structure
-  - $ tree
-
 ## Installation
   0. Configure VM
       - Install VirtualBox
